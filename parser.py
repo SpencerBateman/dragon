@@ -1,6 +1,8 @@
 def loadFile(item):
     with open('example_project/' + item + '.md') as file:
-        print file
+        for line in file:
+            readLine(line)
 
 def readLine(line):
-    line[0] == '#'
+    # print line
+    if line[0] == '#':

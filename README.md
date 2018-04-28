@@ -1,2 +1,3 @@
-# Dragon the preprocessor for Latex Dungeons & Dragons adventures
+# Dragon 
+## The preprocessor for Latex Dungeons & Dragons adventures
 
