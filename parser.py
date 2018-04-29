@@ -4,5 +4,14 @@ def loadFile(item):
             readLine(line)
 
 def readLine(line):
-    # print line
-    if line[0] == '#':
+    if line[:2] == '# ':
+        tex = '\n' + '\chapter{' + line[2:] + '}' + '\n'
+        writeOutput(tex)
+    if line[:3] == '## ':
+        tex = '\n' + '\section{' + line[3:] + '}' + '\n'
+        writeOutput(tex)
+
+def writeOutput(line):
+    with open('build.tex', "a") as file:
+        file.write(line)
+
