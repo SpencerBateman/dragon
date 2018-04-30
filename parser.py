@@ -5,11 +5,13 @@ def loadFile(item):
 
 def readLine(line):
     if line[:2] == '# ':
-        tex = '\n' + '\chapter{' + line[2:] + '}' + '\n'
-        writeOutput(tex)
+        writeOutput('\n' + '\chapter{' + line[2:] + '}' + '\n')
     if line[:3] == '## ':
-        tex = '\n' + '\section{' + line[3:] + '}' + '\n'
-        writeOutput(tex)
+        writeOutput('\n' + '\section{' + line[3:] + '}' + '\n')
+    if line[:4] == '### ':
+        writeOutput('\n' + '\subsection{' + line[3:] + '}' + '\n')
+    if line[:5] == '#### ':
+        writeOutput('\n' + '\header{' + line[3:] + '}' + '\n')
 
 def writeOutput(line):
     with open('build.tex', "a") as file:
