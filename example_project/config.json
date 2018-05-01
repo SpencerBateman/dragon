@@ -1,7 +1,8 @@
 {
   "load": [
-    "header",
-    "footer"
+    "header.tex",
+    "chapter1.md",
+    "footer.tex"
   ]
 }
 
